@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Informatika SMK - Fase E</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+<base target="_blank">
+</head>
+<body>
+    <!-- ============================================ -->
+    <!-- NAVBAR - Navigasi Utama Website              -->
+    <!-- ============================================ -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <!-- Logo Website -->
+            <a class="navbar-brand" href="#beranda">
+                <i class="fas fa-laptop-code me-2"></i>
+                <span class="fw-bold">RUANG INFORMATIKA</span>
+            </a>
+            <!-- Tombol Toggle untuk Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menu Navigasi -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#beranda"><i class="fas fa-home me-1"></i> Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="materi.html"><i class="fas fa-book me-1"></i> Materi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="game.html"><i class="fas fa-gamepad me-1"></i> Game</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#video"><i class="fas fa-play-circle me-1"></i> Video</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#buku">
+                            <i class="fas fa-book-open me-1"></i> Buku
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION - Halaman Utama                 -->
+    <!-- ============================================ -->
+    <section id="beranda" class="hero-section d-flex align-items-center">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Animasi Icon -->
+                    <div class="hero-icon mb-4">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h1 class="display-4 fw-bold mb-3">Belajar Informatika SMK/SMA</h1>
+                    <p class="lead mb-4">
+                        Media pembelajaran interaktif untuk siswa. Pelajari Berpikir Komputasional 
+                        dan Literasi Digital dengan cara yang menyenangkan!
+                    </p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="materi.html#bk" class="btn btn-primary btn-lg px-4">
+                            <i class="fas fa-book-open me-2"></i>Mulai Belajar
+                        </a>
+                        <a href="#video" class="btn btn-outline-light btn-lg px-4">
+                            <i class="fas fa-play me-2"></i>Tonton Video
+                        </a>
+                    </div>
+                    <!-- Info CP -->
+                    <div class="mt-5 pt-3">
+                        <span class="badge bg-light text-dark me-2"><i class="fas fa-check-circle text-success me-1"></i> Kurikulum Merdeka</span>
+                        <span class="badge bg-light text-dark me-2"><i class="fas fa-check-circle text-success me-1"></i> Fase E - Kelas X</span>
+                        <span class="badge bg-light text-dark"><i class="fas fa-check-circle text-success me-1"></i> SMK</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Wave SVG -->
+        <div class="wave-bottom">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#f8f9fa"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- VIDEO SECTION - Pembelajaran Visual          -->
+    <!-- ============================================ -->
+    <section id="video" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold section-title">Video Pembelajaran</h2>
+                <p class="text-muted">Tonton video edukatif untuk memperdalam pemahaman</p>
+                <div class="divider mx-auto"></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Video 1: Berpikir Komputasional -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card video-card border-0 shadow-sm h-100">
+                        <div class="ratio ratio-16x9">
+                            <iframe 
+                                src="https://www.youtube.com/embed/jCb9fpPrxLc" 
+                                title="Pengenalan Computational Thinking"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Berpikir Komputasional</span>
+                            <h5 class="card-title fw-bold">Pengenalan Computational Thinking</h5>
+                            <p class="card-text text-muted small">
+                                Animasi kartun yang menjelaskan konsep Berpikir Komputasional 
+                                dengan cara yang menyenangkan dan mudah dipahami untuk pemula.
+                            </p>
+                            <div class="d-flex align-items-center text-muted small">
+                                <i class="fas fa-clock me-2"></i> Durasi: ~7 menit
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 2: Algoritma & Pseudocode -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card video-card border-0 shadow-sm h-100">
+                        <div class="ratio ratio-16x9">
+                            <iframe 
+                                src="https://www.youtube.com/embed/BMHayvVbP1k" 
+                                title="Apa itu Algoritma?"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Algoritma</span>
+                            <h5 class="card-title fw-bold">Apa itu Algoritma?</h5>
+                            <p class="card-text text-muted small">
+                                Penjelasan lengkap tentang algoritma, flowchart, dan pseudocode 
+                                sesuai Kurikulum Merdeka Informatika Kelas X.
+                            </p>
+                            <div class="d-flex align-items-center text-muted small">
+                                <i class="fas fa-clock me-2"></i> Durasi: ~10 menit
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 3: Jaringan Komputer -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card video-card border-0 shadow-sm h-100">
+                        <div class="ratio ratio-16x9">
+                            <iframe 
+                                src="https://www.youtube.com/embed/IxHjcgRG0Ng" 
+                                title="Jaringan Komputer dan Internet"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">Jaringan</span>
+                            <h5 class="card-title fw-bold">Jaringan Komputer dan Internet</h5>
+                            <p class="card-text text-muted small">
+                                Materi video pembelajaran Informatika tentang jaringan komputer 
+                                dan internet untuk siswa kelas X SMA/SMK.
+                            </p>
+                            <div class="d-flex align-items-center text-muted small">
+                                <i class="fas fa-clock me-2"></i> Durasi: ~15 menit
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 4: Literasi Digital -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card video-card border-0 shadow-sm h-100">
+                        <div class="ratio ratio-16x9">
+                            <iframe 
+                                src="https://www.youtube.com/embed/hwLjSUuyQTw" 
+                                title="Informatika dalam Kurikulum Merdeka"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-info mb-2">Kurikulum</span>
+                            <h5 class="card-title fw-bold">Informatika dalam Kurikulum Merdeka</h5>
+                            <p class="card-text text-muted small">
+                                Webinar BBGP Jabar tentang implementasi Informatika di semua 
+                                jenjang pendidikan pada Kurikulum Merdeka.
+                            </p>
+                            <div class="d-flex align-items-center text-muted small">
+                                <i class="fas fa-clock me-2"></i> Durasi: ~2 jam
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 5: Pseudocode -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card video-card border-0 shadow-sm h-100">
+                        <div class="ratio ratio-16x9">
+                            <iframe 
+                                src="https://www.youtube.com/embed/QyY5cfz2390" 
+                                title="Pseudocode Informatika Kelas X"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Pseudocode</span>
+                            <h5 class="card-title fw-bold">Pseudocode - Informatika Kelas X</h5>
+                            <p class="card-text text-muted small">
+                                Pembahasan lengkap tentang pseudocode sebagai metode 
+                                merencanakan algoritma dalam bentuk kode sederhana.
+                            </p>
+                            <div class="d-flex align-items-center text-muted small">
+                                <i class="fas fa-clock me-2"></i> Durasi: ~8 menit
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 6: Keamanan Digital -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card video-card border-0 shadow-sm h-100">
+                        <div class="ratio ratio-16x9">
+                            <iframe 
+                                src="https://www.youtube.com/embed/nlryyGLl16k" 
+                                title="Video Interaktif Jaringan Lokal dan Internet"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-2">Interaktif</span>
+                            <h5 class="card-title fw-bold">Video Interaktif Jaringan Lokal & Internet</h5>
+                            <p class="card-text text-muted small">
+                                Video interaktif yang membahas materi jaringan lokal dan 
+                                internet sebagai bahan belajar digital.
+                            </p>
+                            <div class="d-flex align-items-center text-muted small">
+                                <i class="fas fa-clock me-2"></i> Durasi: ~12 menit
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ========================================== -->
+<!-- SECTION BUKU - Download Buku Ajar          -->
+<!-- ========================================== -->
+<section id="buku" class="py-5">
+  <div class="container">
+    
+    <!-- Header Section -->
+    <div class="text-center mb-5">
+      <div class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white bg-opacity-20 mb-3" 
+           style="width: 80px; height: 80px;">
+        <i class="fas fa-book-open fa-2x text-white"></i>
+      </div>
+      <h2 class="fw-bold text-white mb-2">Buku Ajar</h2>
+      <p class="text-white-50">Download buku ajar resmi untuk mendukung pembelajaran</p>
+    </div>
+
+    <!-- Grid Buku -->
+    <div class="row g-4 justify-content-center">
+      
+      <!-- Buku Kelas X -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-lg" style="border-radius: 15px; overflow: hidden;">
+          <div class="card-header text-white text-center py-4" 
+               style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none;">
+            <i class="fas fa-book fa-3x mb-2 opacity-75"></i>
+            <h5 class="fw-bold mb-0">Kelas X</h5>
+          </div>
+          <div class="card-body p-4">
+            <h6 class="fw-bold text-primary">Informatika Kelas X</h6>
+            <p class="text-muted small mb-3">Kurikulum Merdeka - Fase E</p>
+            
+            <ul class="list-unstyled small text-muted mb-3">
+              <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Berpikir Komputasional</li>
+              <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Literasi Digital</li>
+              <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Teknologi Informasi</li>
+            </ul>
+
+            <div class="d-flex align-items-center text-muted small mb-3">
+              <i class="fas fa-file-pdf text-danger me-2"></i>
+              <span>PDF • 15 MB</span>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 p-4 pt-0">
+            <a href="https://buku.kemendikdasmen.go.id/katalog/informatika-untuk-smamasmkmak-kelas-x-edisi-revisi" 
+               class="btn w-100 text-white fw-bold" 
+               style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; padding: 12px;"
+               download>
+              <i class="fas fa-download me-2"></i>Download Buku
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buku Kelas XI -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-lg" style="border-radius: 15px; overflow: hidden;">
+          <div class="card-header text-white text-center py-4" 
+               style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none;">
+            <i class="fas fa-book fa-3x mb-2 opacity-75"></i>
+            <h5 class="fw-bold mb-0">Kelas XI</h5>
+          </div>
+          <div class="card-body p-4">
+            <h6 class="fw-bold text-primary">Informatika Kelas XI</h6>
+            <p class="text-muted small mb-3">Kurikulum Merdeka - Fase F</p>
+            
+            <ul class="list-unstyled small text-muted mb-3">
+              <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Algoritma & Pemrograman</li>
+              <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Basis Data</li>
+              <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Struktur Data</li>
+            </ul>
+
+            <div class="d-flex align-items-center text-muted small mb-3">
+              <i class="fas fa-file-pdf text-danger me-2"></i>
+              <span>PDF • 18 MB</span>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 p-4 pt-0">
+            <a href="https://buku.kemendikdasmen.go.id/katalog/informatika-untuk-smama-kelas-xi-edisi-revisi" 
+               class="btn w-100 text-white fw-bold" 
+               style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; padding: 12px;"
+               download>
+              <i class="fas fa-download me-2"></i>Download Buku
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buku Kelas XII -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-lg" style="border-radius: 15px; overflow: hidden;">
+          <div class="card-header text-white text-center py-4" 
+               style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none;">
+            <i class="fas fa-book fa-3x mb-2 opacity-75"></i>
+            <h5 class="fw-bold mb-0">Kelas XII</h5>
+          </div>
+          <div class="card-body p-4">
+            <h6 class="fw-bold text-primary">Informatika Kelas XII</h6>
+            <p class="text-muted small mb-3">Kurikulum Merdeka - Fase F</p>
+            
+            <ul class="list-unstyled small text-muted mb-3">
+              <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Pengembangan Web</li>
+              <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Jaringan Komputer</li>
+              <li class="mb-1"><i class="fas fa-check-circle text-success me-2"></i>Keamanan Siber</li>
+            </ul>
+
+            <div class="d-flex align-items-center text-muted small mb-3">
+              <i class="fas fa-file-pdf text-danger me-2"></i>
+              <span>PDF • 20 MB</span>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 p-4 pt-0">
+            <a href="https://buku.kemendikdasmen.go.id/katalog/informatika-untuk-smama-kelas-xii" 
+               class="btn w-100 text-white fw-bold" 
+               style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; padding: 12px;"
+               download>
+              <i class="fas fa-download me-2"></i>Download Buku
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER - Bagian Bawah Website                -->
+    <!-- ============================================ -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">
+                        <i class="fas fa-laptop-code me-2"></i>
+                        <strong>Belajar Informatika SMK</strong> - Fase E
+                    </p>
+                    <small class="text-muted">Media pembelajaran interaktif berbasis Kurikulum Merdeka</small>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <small class="text-muted">
+                        <i class="fas fa-heart text-danger me-1"></i> Dibuat untuk siswa SMK Kelas X
+                    </small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tombol Kembali ke Atas -->
+    <button id="backToTop" class="btn btn-primary rounded-circle shadow" title="Kembali ke Atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

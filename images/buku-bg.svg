@@ -1,0 +1,91 @@
+<svg viewBox="0 0 1717 906" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4338ca"/>
+      <stop offset="50%" stop-color="#5b4fc7"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1717" height="906" fill="url(#bgGrad)"/>
+
+  <!-- dotted grid accents -->
+  <g fill="#ffffff" opacity="0.18">
+    <circle cx="90" cy="80" r="4"/><circle cx="118" cy="80" r="4"/><circle cx="146" cy="80" r="4"/>
+    <circle cx="90" cy="108" r="4"/><circle cx="118" cy="108" r="4"/><circle cx="146" cy="108" r="4"/>
+    <circle cx="90" cy="136" r="4"/><circle cx="118" cy="136" r="4"/><circle cx="146" cy="136" r="4"/>
+  </g>
+  <g fill="#ffffff" opacity="0.15">
+    <circle cx="1580" cy="300" r="4"/><circle cx="1608" cy="300" r="4"/><circle cx="1636" cy="300" r="4"/>
+    <circle cx="1580" cy="328" r="4"/><circle cx="1608" cy="328" r="4"/><circle cx="1636" cy="328" r="4"/>
+    <circle cx="1580" cy="356" r="4"/><circle cx="1608" cy="356" r="4"/><circle cx="1636" cy="356" r="4"/>
+  </g>
+
+  <!-- soft glow dots -->
+  <circle cx="120" cy="350" r="5" fill="#7dd3fc" opacity="0.8"/>
+  <circle cx="1450" cy="150" r="6" fill="#fbbf24" opacity="0.7"/>
+  <circle cx="1600" cy="650" r="5" fill="#a78bfa" opacity="0.7"/>
+
+  <!-- large flowing wave shapes -->
+  <path d="M0,650 C300,580 500,720 850,660 C1150,610 1350,700 1717,620 L1717,906 L0,906 Z" fill="url(#waveGrad1)"/>
+  <path d="M0,750 C350,700 600,820 950,760 C1250,710 1450,800 1717,740 L1717,906 L0,906 Z" fill="#ffffff" opacity="0.07"/>
+
+  <!-- Open book illustration (center-left, large, line art) -->
+  <g transform="translate(180,520)" opacity="0.22" stroke="#ffffff" stroke-width="5" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M0,40 C60,10 160,10 200,40 L200,230 C160,200 60,200 0,230 Z"/>
+    <path d="M400,40 C340,10 240,10 200,40 L200,230 C240,200 340,200 400,230 Z"/>
+    <line x1="20" x2="180" y1="70" y2="55"/>
+    <line x1="20" x2="180" y1="100" y2="85"/>
+    <line x1="20" x2="180" y1="130" y2="115"/>
+    <line x1="220" x2="380" y1="55" y2="70"/>
+    <line x1="220" x2="380" y1="85" y2="100"/>
+    <line x1="220" x2="380" y1="115" y2="130"/>
+  </g>
+
+  <!-- Bookshelf / stacked books illustration (right side) -->
+  <g transform="translate(1250,520)" opacity="0.22" stroke="#ffffff" stroke-width="5" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="0" y="160" width="260" height="22" rx="4"/>
+    <rect x="15" y="60" width="36" height="100" rx="3"/>
+    <rect x="58" y="40" width="36" height="120" rx="3"/>
+    <rect x="101" y="75" width="36" height="85" rx="3"/>
+    <rect x="144" y="20" width="36" height="140" rx="3"/>
+    <rect x="187" y="55" width="36" height="105" rx="3"/>
+  </g>
+
+  <!-- graduation cap (top right, matches site theme) -->
+  <g transform="translate(1480,60)" opacity="0.25" stroke="#ffffff" stroke-width="5" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M60,0 L120,28 L60,56 L0,28 Z"/>
+    <path d="M30,38 L30,70 C30,85 90,85 90,70 L90,38"/>
+    <line x1="120" x2="120" y1="28" y2="70"/>
+    <circle cx="120" cy="76" r="6" fill="#ffffff" fill-opacity="0.25" stroke="none"/>
+  </g>
+
+  <!-- quill / pencil accent -->
+  <g transform="translate(70,650) rotate(-25)" opacity="0.2" stroke="#ffffff" stroke-width="5" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <line x1="0" y1="0" x2="140" y2="0"/>
+    <path d="M140,0 L160,0 L150,18 Z"/>
+  </g>
+
+  <!-- bookmark ribbon accent -->
+  <g transform="translate(1600,470)" opacity="0.2" fill="#ffffff">
+    <path d="M0,0 L36,0 L36,90 L18,70 L0,90 Z"/>
+  </g>
+
+  <!-- plus / sparkle accents -->
+  <g stroke="#ffffff" stroke-width="4" opacity="0.3" stroke-linecap="round">
+    <line x1="1380" y1="430" x2="1380" y2="454"/>
+    <line x1="1368" y1="442" x2="1392" y2="442"/>
+  </g>
+  <g stroke="#ffffff" stroke-width="3" opacity="0.25" stroke-linecap="round">
+    <line x1="640" y1="120" x2="640" y2="138"/>
+    <line x1="631" y1="129" x2="649" y2="129"/>
+  </g>
+
+  <!-- thin circle outlines -->
+  <circle cx="950" cy="200" r="34" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.18"/>
+  <circle cx="60" cy="450" r="26" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.18"/>
+</svg>

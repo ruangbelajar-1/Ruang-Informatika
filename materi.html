@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Lengkap - Belajar Informatika SMK</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .materi-detail { background: white; border-radius: 15px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 5px 20px rgba(0,0,0,0.08); }
+        .materi-detail h3 { color: #667eea; border-left: 4px solid #667eea; padding-left: 1rem; margin-bottom: 1.5rem; }
+        .materi-detail h4 { color: #764ba2; margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.2rem; }
+        .code-block { background: #1e1e1e; color: #d4d4d4; padding: 1.5rem; border-radius: 10px; font-family: 'Consolas', 'Monaco', monospace; font-size: 0.9rem; overflow-x: auto; margin: 1rem 0; }
+        .code-block .comment { color: #6a9955; }
+        .code-block .keyword { color: #569cd6; }
+        .code-block .string { color: #ce9178; }
+        .code-block .number { color: #b5cea8; }
+        .highlight-box { background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%); border-left: 4px solid #667eea; padding: 1.5rem; border-radius: 0 10px 10px 0; margin: 1.5rem 0; }
+        .info-box { background: #e7f3ff; border: 1px solid #b3d9ff; padding: 1rem 1.5rem; border-radius: 10px; margin: 1rem 0; }
+        .warning-box { background: #fff3cd; border: 1px solid #ffc107; padding: 1rem 1.5rem; border-radius: 10px; margin: 1rem 0; }
+        .table-materi { background: white; border-radius: 10px; overflow: hidden; }
+        .table-materi th { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .step-number { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 50%; font-weight: bold; margin-right: 10px; font-size: 0.9rem; }
+        .diagram-box { background: #f8f9fa; border: 2px dashed #667eea; padding: 2rem; border-radius: 15px; text-align: center; margin: 1.5rem 0; }
+        .quiz-box { background: white; border: 2px solid #667eea; border-radius: 15px; padding: 1.5rem; margin: 1.5rem 0; }
+        .quiz-answer { display: none; background: #d4edda; padding: 1rem; border-radius: 10px; margin-top: 1rem; }
+        .btn-reveal { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 0.5rem 1.5rem; border-radius: 25px; cursor: pointer; }
+        .sidebar-menu { position: sticky; top: 100px; }
+        .sidebar-menu .list-group-item { border: none; border-radius: 10px; margin-bottom: 5px; transition: all 0.3s; }
+        .sidebar-menu .list-group-item:hover, .sidebar-menu .list-group-item.active { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-laptop-code me-2"></i><span class="fw-bold">RUANG INFORMATIKA</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#beranda"><i class="fas fa-home me-1"></i> Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="materi.html"><i class="fas fa-book me-1"></i> Materi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="game.html"><i class="fas fa-gamepad me-1"></i> Game</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#video"><i class="fas fa-play-circle me-1"></i> Video</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#buku"><i class="fas fa-newspaper me-1"></i> Buku</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5 mt-5 bg-light">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="fw-bold">Materi Lengkap Informatika</h1>
+                <p class="text-muted">SMK Kelas X - Fase E | Kurikulum Merdeka</p>
+                <div class="divider mx-auto"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-3 mb-4">
+                <div class="sidebar-menu">
+                    <h5 class="fw-bold mb-3"><i class="fas fa-list-ul me-2 text-primary"></i>Daftar Materi</h5>
+                    <div class="list-group">
+                        <a href="#bk" class="list-group-item list-group-item-action active"><i class="fas fa-brain me-2"></i>Berpikir Komputasional</a>
+                        <a href="#bk1" class="list-group-item list-group-item-action ps-4">1. Struktur Data & Algoritma</a>
+                        <a href="#bk2" class="list-group-item list-group-item-action ps-4">2. Proses Komputasi</a>
+                        <a href="#bk3" class="list-group-item list-group-item-action ps-4">3. Pseudocode</a>
+                        <a href="#bk4" class="list-group-item list-group-item-action ps-4">4. Model IPO</a>
+                        <a href="#bk5" class="list-group-item list-group-item-action ps-4">5. Von Neumann</a>
+                        <a href="#bk6" class="list-group-item list-group-item-action ps-4">6. State Machine & OS</a>
+                        <a href="#ld" class="list-group-item list-group-item-action"><i class="fas fa-digital-tachograph me-2"></i>Literasi Digital</a>
+                        <a href="#ld1" class="list-group-item list-group-item-action ps-4">1. Mesin Pencari</a>
+                        <a href="#ld2" class="list-group-item list-group-item-action ps-4">2. Evaluasi Informasi</a>
+                        <a href="#ld3" class="list-group-item list-group-item-action ps-4">3. Aplikasi Produktivitas</a>
+                        <a href="#ld4" class="list-group-item list-group-item-action ps-4">4. Jaringan Komputer</a>
+                        <a href="#ld5" class="list-group-item list-group-item-action ps-4">5. Keamanan Digital</a>
+                        <a href="#ld6" class="list-group-item list-group-item-action ps-4">6. HKI & Etika Digital</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-9">
+                <div id="bk" class="materi-detail">
+                    <h2 class="fw-bold text-primary mb-4"><i class="fas fa-brain me-2"></i>Berpikir Komputasional</h2>
+                    <p class="lead">Berpikir komputasional adalah cara berpikir untuk memecahkan masalah dengan menggunakan konsep-konsep dasar ilmu komputer. Ada 4 pilar utama: <strong>Decomposition</strong> (memecah masalah), <strong>Pattern Recognition</strong> (mengenali pola), <strong>Abstraction</strong> (penyederhanaan), dan <strong>Algorithm</strong> (langkah penyelesaian).</p>
+                </div>
+
+                <div id="bk1" class="materi-detail">
+                    <h3>1. Struktur Data dan Algoritma Dasar</h3>
+                    <h4>Apa itu Struktur Data?</h4>
+                    <p>Struktur data adalah cara menyimpan dan mengatur data di komputer agar dapat digunakan secara efisien. Bayangkan seperti menyimpan buku di perpustakaan - jika tersusun rapi, mencari buku menjadi lebih mudah!</p>
+                    <div class="highlight-box"><strong>Analogi:</strong> Struktur data seperti lemari pakaian. Jika kaos, celana, dan jaket disimpan terpisah (terstruktur), kita bisa mengambil pakaian lebih cepat dibandingkan jika semuanya dicampur.</div>
+                    <h4>Tipe Data Dasar</h4>
+                    <div class="table-responsive">
+                        <table class="table table-materi table-bordered">
+                            <thead><tr><th>Tipe Data</th><th>Penjelasan</th><th>Contoh</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Integer</strong></td><td>Bilangan bulat (tanpa desimal)</td><td>10, -5, 0, 1000</td></tr>
+                                <tr><td><strong>Float/Double</strong></td><td>Bilangan desimal</td><td>3.14, -0.5, 2.718</td></tr>
+                                <tr><td><strong>String</strong></td><td>Teks/kumpulan karakter</td><td>"Halo", "SMK", "Informatika"</td></tr>
+                                <tr><td><strong>Boolean</strong></td><td>Nilai benar atau salah</td><td>true, false</td></tr>
+                                <tr><td><strong>Array/List</strong></td><td>Kumpulan data dengan tipe sama</td><td>[1, 2, 3, 4, 5]</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h4>Apa itu Algoritma?</h4>
+                    <p>Algoritma adalah <strong>langkah-langkah logis dan terurut</strong> untuk menyelesaikan suatu masalah. Algoritma harus memiliki sifat:</p>
+                    <ul>
+                        <li><strong>Finite (Terbatas):</strong> Memiliki awal dan akhir yang jelas</li>
+                        <li><strong>Definite (Tepat):</strong> Setiap langkah jelas dan tidak ambigu</li>
+                        <li><strong>Input:</strong> Memiliki masukan (boleh 0 atau lebih)</li>
+                        <li><strong>Output:</strong> Menghasilkan keluaran (minimal 1)</li>
+                        <li><strong>Effective:</strong> Setiap langkah dapat dikerjakan</li>
+                    </ul>
+                    <div class="info-box">
+                        <strong>Contoh Algoritma Sederhana:</strong> Membuat Teh Manis<br><br>
+                        <span class="step-number">1</span> Siapkan gelas, teh celup, gula, dan air panas<br>
+                        <span class="step-number">2</span> Masukkan teh celup ke dalam gelas<br>
+                        <span class="step-number">3</span> Tuangkan air panas ke gelas<br>
+                        <span class="step-number">4</span> Tambahkan 2 sendok gula<br>
+                        <span class="step-number">5</span> Aduk hingga gula larut<br>
+                        <span class="step-number">6</span> Teh manis siap diminum
+                    </div>
+                    <h4>Operasi Aritmatika & Logika</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Operator Aritmatika</h5>
+                            <table class="table table-sm table-bordered">
+                                <tr><td><code>+</code></td><td>Penjumlahan</td><td>5 + 3 = 8</td></tr>
+                                <tr><td><code>-</code></td><td>Pengurangan</td><td>5 - 3 = 2</td></tr>
+                                <tr><td><code>*</code></td><td>Perkalian</td><td>5 * 3 = 15</td></tr>
+                                <tr><td><code>/</code></td><td>Pembagian</td><td>6 / 3 = 2</td></tr>
+                                <tr><td><code>%</code></td><td>Modulus (sisa bagi)</td><td>5 % 3 = 2</td></tr>
+                            </table>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Operator Logika</h5>
+                            <table class="table table-sm table-bordered">
+                                <tr><td><code>AND</code></td><td>Benar jika keduanya benar</td></tr>
+                                <tr><td><code>OR</code></td><td>Benar jika salah satu benar</td></tr>
+                                <tr><td><code>NOT</code></td><td>Membalik nilai kebenaran</td></tr>
+                                <tr><td><code>==</code></td><td>Sama dengan</td></tr>
+                                <tr><td><code>!=</code></td><td>Tidak sama dengan</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="quiz-box">
+                        <h5><i class="fas fa-question-circle me-2 text-primary"></i>Quiz Cepat!</h5>
+                        <p>Jika <code>a = 10</code>, <code>b = 3</code>, berapakah hasil <code>a % b</code>?</p>
+                        <button class="btn-reveal" onclick="this.nextElementSibling.style.display='block';this.style.display='none';">Lihat Jawaban</button>
+                        <div class="quiz-answer"><strong>Jawaban: 1</strong><br>Karena 10 dibagi 3 = 3 sisa <strong>1</strong>. Operator modulus (%) menghasilkan sisa pembagian.</div>
+                    </div>
+                </div>
+
+                <div id="bk2" class="materi-detail">
+                    <h3>2. Proses Komputasi (Manual & Komputer)</h3>
+                    <h4>Apa itu Komputasi?</h4>
+                    <p>Komputasi adalah proses menghitung atau memproses data untuk menghasilkan informasi. Komputasi bisa dilakukan secara <strong>manual</strong> (oleh manusia) maupun <strong>komputer</strong> (oleh mesin).</p>
+                    <h4>Komputasi Manual vs Komputasi Komputer</h4>
+                    <div class="table-responsive">
+                        <table class="table table-materi table-bordered">
+                            <thead><tr><th>Aspek</th><th>Komputasi Manual</th><th>Komputasi Komputer</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Kecepatan</strong></td><td>Lambat (tergantung manusia)</td><td>Sangat cepat (jutaan operasi/detik)</td></tr>
+                                <tr><td><strong>Akurasi</strong></td><td>Rentan kesalahan manusia</td><td>Sangat akurat (jika program benar)</td></tr>
+                                <tr><td><strong>Kapasitas</strong></td><td>Terbatas (memori manusia)</td><td>Sangat besar (GB/TB data)</td></tr>
+                                <tr><td><strong>Kelelahan</strong></td><td>Cepat lelah</td><td>Tidak pernah lelah</td></tr>
+                                <tr><td><strong>Contoh</strong></td><td>Menghitung dengan kalkulator, menulis di kertas</td><td>Spreadsheet, aplikasi perhitungan</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="highlight-box"><strong>Contoh Kasus:</strong> Menghitung Rata-rata Nilai 40 Siswa<br><br><strong>Manual:</strong> Menjumlahkan satu per satu di kertas - ~15 menit, risalah salah hitung.<br><strong>Komputer:</strong> Menggunakan Excel dengan rumus AVERAGE - ~10 detik, akurat 100%.</div>
+                    <h4>Siklus Pemrosesan Data</h4>
+                    <div class="diagram-box">
+                        <h5><i class="fas fa-sync-alt me-2 text-primary"></i>Siklus Pemrosesan Data</h5>
+                        <div class="row mt-3">
+                            <div class="col-md-3"><div class="p-3 bg-primary text-white rounded"><i class="fas fa-keyboard fa-2x mb-2"></i><br><strong>INPUT</strong><br><small>Data masuk</small></div></div>
+                            <div class="col-md-1 d-flex align-items-center justify-content-center"><i class="fas fa-arrow-right text-primary fa-2x"></i></div>
+                            <div class="col-md-3"><div class="p-3 bg-success text-white rounded"><i class="fas fa-cogs fa-2x mb-2"></i><br><strong>PROCESS</strong><br><small>Data diproses</small></div></div>
+                            <div class="col-md-1 d-flex align-items-center justify-content-center"><i class="fas fa-arrow-right text-success fa-2x"></i></div>
+                            <div class="col-md-3"><div class="p-3 bg-warning text-dark rounded"><i class="fas fa-desktop fa-2x mb-2"></i><br><strong>OUTPUT</strong><br><small>Hasil keluar</small></div></div>
+                        </div>
+                    </div>
+                    <h4>Contoh Proses Komputasi: Penjualan Toko</h4>
+                    <div class="info-box"><strong>Input:</strong> Data penjualan harian (barang, jumlah, harga)<br><strong>Process:</strong> Menghitung total penjualan, keuntungan, stok tersisa<br><strong>Output:</strong> Laporan penjualan, grafik performa, notifikasi stok habis</div>
+                </div>
+
+                <div id="bk3" class="materi-detail">
+                    <h3>3. Pseudocode</h3>
+                    <h4>Apa itu Pseudocode?</h4>
+                    <p>Pseudocode (kode semu) adalah cara menulis algoritma menggunakan bahasa yang <strong>mirip bahasa pemrograman</strong> tetapi masih mudah dipahami manusia. Pseudocode tidak memiliki aturan sintaks yang ketat seperti bahasa pemrograman sungguhan.</p>
+                    <div class="highlight-box"><strong>Tujuan Pseudocode:</strong><br>1. Merencanakan algoritma sebelum coding<br>2. Memudahkan komunikasi antar programmer<br>3. Dokumentasi logika program<br>4. Belajar logika tanpa terikat sintaks bahasa pemrograman</div>
+                    <h4>Struktur Dasar Pseudocode</h4>
+                    <h5>A. Input dan Output</h5>
+                    <div class="code-block">
+<span class="comment">// Membaca input dari pengguna</span>
+<span class="keyword">INPUT</span> nama
+<span class="keyword">INPUT</span> umur
+
+<span class="comment">// Menampilkan output ke layar</span>
+<span class="keyword">OUTPUT</span> <span class="string">"Halo, "</span> + nama
+<span class="keyword">OUTPUT</span> <span class="string">"Umur Anda: "</span> + umur
+                    </div>
+                    <h5>B. Percabangan (IF-THEN-ELSE)</h5>
+                    <div class="code-block">
+<span class="comment">// Menentukan kelulusan berdasarkan nilai</span>
+<span class="keyword">INPUT</span> nilai
+
+<span class="keyword">IF</span> nilai >= 75 <span class="keyword">THEN</span>
+    <span class="keyword">OUTPUT</span> <span class="string">"Selamat, Anda LULUS!"</span>
+<span class="keyword">ELSE</span>
+    <span class="keyword">OUTPUT</span> <span class="string">"Maaf, Anda BELUM LULUS."</span>
+<span class="keyword">ENDIF</span>
+                    </div>
+                    <h5>C. Perulangan (FOR dan WHILE)</h5>
+                    <div class="code-block">
+<span class="comment">// Perulangan FOR: Cetak angka 1 sampai 5</span>
+<span class="keyword">FOR</span> i <span class="keyword">FROM</span> <span class="number">1</span> <span class="keyword">TO</span> <span class="number">5</span> <span class="keyword">DO</span>
+    <span class="keyword">OUTPUT</span> i
+<span class="keyword">ENDFOR</span>
+
+<span class="comment">// Perulangan WHILE: Cetak selama kondisi benar</span>
+<span class="keyword">SET</span> i = <span class="number">1</span>
+<span class="keyword">WHILE</span> i <= <span class="number">5</span> <span class="keyword">DO</span>
+    <span class="keyword">OUTPUT</span> i
+    <span class="keyword">SET</span> i = i + <span class="number">1</span>
+<span class="keyword">ENDWHILE</span>
+                    </div>
+                    <h5>D. Contoh Lengkap: Menghitung Luas Persegi Panjang</h5>
+                    <div class="code-block">
+<span class="comment">// Program: Hitung Luas Persegi Panjang</span>
+<span class="comment">// Input: panjang dan lebar</span>
+<span class="comment">// Output: luas</span>
+
+<span class="keyword">START</span>
+    <span class="comment">// Deklarasi variabel</span>
+    <span class="keyword">DECLARE</span> panjang, lebar, luas <span class="keyword">AS</span> NUMBER
+
+    <span class="comment">// Input dari pengguna</span>
+    <span class="keyword">OUTPUT</span> <span class="string">"Masukkan panjang: "</span>
+    <span class="keyword">INPUT</span> panjang
+
+    <span class="keyword">OUTPUT</span> <span class="string">"Masukkan lebar: "</span>
+    <span class="keyword">INPUT</span> lebar
+
+    <span class="comment">// Proses perhitungan</span>
+    <span class="keyword">SET</span> luas = panjang * lebar
+
+    <span class="comment">// Tampilkan hasil</span>
+    <span class="keyword">OUTPUT</span> <span class="string">"Luas persegi panjang = "</span> + luas
+<span class="keyword">END</span>
+                    </div>
+                    <h4>Aturan Penulisan Pseudocode yang Baik</h4>
+                    <ol>
+                        <li>Gunakan <strong>indentasi</strong> (spasi/tab) untuk menunjukkan hierarki</li>
+                        <li>Berikan <strong>komentar</strong> (diawali //) untuk penjelasan</li>
+                        <li>Gunakan <strong>kata kunci</strong> yang jelas: START, END, INPUT, OUTPUT, IF, THEN, ELSE, FOR, WHILE</li>
+                        <li>Setiap langkah harus <strong>spesifik dan tidak ambigu</strong></li>
+                        <li>Gunakan <strong>huruf kapital</strong> untuk kata kunci (opsional, tapi disarankan)</li>
+                    </ol>
+                    <div class="quiz-box">
+                        <h5><i class="fas fa-question-circle me-2 text-primary"></i>Latihan Pseudocode!</h5>
+                        <p>Buatlah pseudocode untuk menghitung total harga pembelian dengan diskon 10% jika total > Rp100.000!</p>
+                        <button class="btn-reveal" onclick="this.nextElementSibling.style.display='block';this.style.display='none';">Lihat Contoh Jawaban</button>
+                        <div class="quiz-answer">
+                            <div class="code-block">
+<span class="keyword">START</span>
+    <span class="keyword">INPUT</span> total_harga
+
+    <span class="keyword">IF</span> total_harga > <span class="number">100000</span> <span class="keyword">THEN</span>
+        <span class="keyword">SET</span> diskon = total_harga * <span class="number">0.10</span>
+        <span class="keyword">SET</span> total_bayar = total_harga - diskon
+        <span class="keyword">OUTPUT</span> <span class="string">"Diskon: Rp"</span> + diskon
+    <span class="keyword">ELSE</span>
+        <span class="keyword">SET</span> total_bayar = total_harga
+        <span class="keyword">OUTPUT</span> <span class="string">"Tidak ada diskon"</span>
+    <span class="keyword">ENDIF</span>
+
+    <span class="keyword">OUTPUT</span> <span class="string">"Total bayar: Rp"</span> + total_bayar
+<span class="keyword">END</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="bk4" class="materi-detail">
+                    <h3>4. Model IPO (Input-Process-Output)</h3>
+                    <h4>Apa itu Model IPO?</h4>
+                    <p>Model IPO adalah kerangka berpikir dasar dalam pemrosesan data yang terdiri dari tiga komponen: <strong>Input</strong> (masukan), <strong>Process</strong> (proses), dan <strong>Output</strong> (keluaran). Model ini adalah fondasi dari semua sistem komputer.</p>
+                    <div class="diagram-box">
+                        <h5><i class="fas fa-project-diagram me-2 text-primary"></i>Diagram Model IPO</h5>
+                        <div class="row mt-4 align-items-center">
+                            <div class="col-md-3"><div class="p-4 bg-primary text-white rounded-3 shadow"><i class="fas fa-sign-in-alt fa-3x mb-3"></i><h5>INPUT</h5><small>Data yang dimasukkan ke sistem</small></div></div>
+                            <div class="col-md-1"><i class="fas fa-arrow-right text-primary fa-2x"></i></div>
+                            <div class="col-md-4"><div class="p-4 bg-success text-white rounded-3 shadow"><i class="fas fa-microchip fa-3x mb-3"></i><h5>PROCESS</h5><small>Data diproses/diolah oleh sistem</small></div></div>
+                            <div class="col-md-1"><i class="fas fa-arrow-right text-success fa-2x"></i></div>
+                            <div class="col-md-3"><div class="p-4 bg-warning text-dark rounded-3 shadow"><i class="fas fa-sign-out-alt fa-3x mb-3"></i><h5>OUTPUT</h5><small>Hasil yang dihasilkan sistem</small></div></div>
+                        </div>
+                    </div>
+                    <h4>Penjelasan Detail Setiap Komponen</h4>
+                    <h5>1. Input (Masukan)</h5>
+                    <p>Input adalah data atau informasi yang dimasukkan ke dalam sistem untuk diproses. Input bisa berasal dari:</p>
+                    <ul>
+                        <li><strong>Keyboard:</strong> Mengetik nama, angka, teks</li>
+                        <li><strong>Mouse:</strong> Klik, pilih menu, gambar</li>
+                        <li><strong>Scanner:</strong> Memindai dokumen/gambar</li>
+                        <li><strong>Sensor:</strong> Suhu, cahaya, gerakan</li>
+                        <li><strong>File:</strong> Data dari penyimpanan</li>
+                    </ul>
+                    <h5>2. Process (Proses)</h5>
+                    <p>Process adalah kegiatan mengolah input menjadi output. Proses bisa berupa:</p>
+                    <ul>
+                        <li><strong>Perhitungan:</strong> Menjumlahkan, mengurangi, mengalikan</li>
+                        <li><strong>Perbandingan:</strong> Membandingkan nilai (lebih besar, sama, dll)</li>
+                        <li><strong>Pengurutan:</strong> Mengurutkan data (A-Z, terbesar-kecil)</li>
+                        <li><strong>Pencarian:</strong> Mencari data tertentu</li>
+                        <li><strong>Transformasi:</strong> Mengubah format data</li>
+                    </ul>
+                    <h5>3. Output (Keluaran)</h5>
+                    <p>Output adalah hasil dari proses yang ditampilkan atau disimpan. Bentuk output:</p>
+                    <ul>
+                        <li><strong>Monitor:</strong> Tampilan visual (teks, gambar, video)</li>
+                        <li><strong>Printer:</strong> Cetakan dokumen</li>
+                        <li><strong>Speaker:</strong> Suara/audio</li>
+                        <li><strong>File:</strong> Data disimpan ke penyimpanan</li>
+                        <li><strong>Jaringan:</strong> Data dikirim ke perangkat lain</li>
+                    </ul>
+                    <h4>Contoh Penerapan Model IPO</h4>
+                    <div class="table-responsive">
+                        <table class="table table-materi table-bordered">
+                            <thead><tr><th>Kasus</th><th>Input</th><th>Process</th><th>Output</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Kalkulator</strong></td><td>Dua angka, operator (+, -, *, /)</td><td>Menghitung hasil operasi</td><td>Hasil perhitungan di layar</td></tr>
+                                <tr><td><strong>ATM</strong></td><td>Kartu ATM, PIN, jumlah uang</td><td>Verifikasi PIN, cek saldo, kurangi saldo</td><td>Uang tunai, struk transaksi</td></tr>
+                                <tr><td><strong>Absensi</strong></td><td>Sidik jari/NISN, waktu</td><td>Cocokkan data, catat waktu</td><td>Status hadir, laporan kehadiran</td></tr>
+                                <tr><td><strong>Game</strong></td><td>Tekanan tombol, gerakan mouse</td><td>Hitung posisi, deteksi tabrakan, update skor</td><td>Grafik game, skor, efek suara</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="info-box"><strong><i class="fas fa-lightbulb me-2"></i>Tips Mengidentifikasi IPO:</strong><br>Tanyakan pada diri sendiri:<br>1. <strong>Input:</strong> "Apa yang saya masukkan ke sistem?"<br>2. <strong>Process:</strong> "Apa yang dilakukan sistem dengan data tersebut?"<br>3. <strong>Output:</strong> "Apa hasil yang saya dapatkan?"</div>
+                </div>
+
+                <div id="bk5" class="materi-detail">
+                    <h3>5. Sistem Komputer Von Neumann</h3>
+                    <h4>Sejarah Arsitektur Von Neumann</h4>
+                    <p>Arsitektur Von Neumann dikembangkan oleh matematikawan <strong>John von Neumann</strong> pada tahun 1945. Arsitektur ini menjadi dasar dari hampir semua komputer modern hingga saat ini.</p>
+                    <div class="highlight-box"><strong>Konsep Utama Von Neumann:</strong><br>Program dan data disimpan dalam <strong>memori yang sama</strong>. Komputer membaca instruksi dari memori, mengeksekusinya, lalu melanjutkan ke instruksi berikutnya secara berurutan.</div>
+                    <h4>Komponen Arsitektur Von Neumann</h4>
+                    <div class="diagram-box">
+                        <h5><i class="fas fa-sitemap me-2 text-primary"></i>Diagram Arsitektur Von Neumann</h5>
+                        <div class="row mt-4">
+                            <div class="col-md-12">
+                                <div class="p-3 bg-primary text-white rounded mb-3"><i class="fas fa-keyboard me-2"></i><strong>INPUT DEVICE</strong> (Keyboard, Mouse, Scanner)</div>
+                                <div class="p-3 bg-dark text-white rounded mb-3">
+                                    <div class="row">
+                                        <div class="col-md-6 border-end"><i class="fas fa-microchip me-2"></i><strong>CPU</strong><br><small>ALU + Control Unit + Registers</small></div>
+                                        <div class="col-md-6"><i class="fas fa-memory me-2"></i><strong>MEMORY</strong><br><small>RAM (Data & Program)</small></div>
+                                    </div>
+                                </div>
+                                <div class="p-3 bg-warning text-dark rounded"><i class="fas fa-desktop me-2"></i><strong>OUTPUT DEVICE</strong> (Monitor, Printer, Speaker)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Penjelasan Komponen</h4>
+                    <h5>1. Central Processing Unit (CPU)</h5>
+                    <p>CPU adalah "otak" komputer yang menjalankan instruksi program. CPU terdiri dari:</p>
+                    <ul>
+                        <li><strong>ALU (Arithmetic Logic Unit):</strong> Melakukan operasi matematika (tambah, kurang, kali, bagi) dan logika (AND, OR, NOT)</li>
+                        <li><strong>Control Unit (CU):</strong> Mengatur dan mengontrol alur instruksi, mengambil data dari memori, mengirim hasil ke output</li>
+                        <li><strong>Registers:</strong> Memori kecil berkecepatan tinggi di dalam CPU untuk menyimpan data sementara</li>
+                    </ul>
+                    <h5>2. Memory (Memori)</h5>
+                    <p>Tempat menyimpan data dan program. Ada dua jenis utama:</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded">
+                                <h6><i class="fas fa-memory text-primary me-2"></i><strong>RAM (Random Access Memory)</strong></h6>
+                                <ul class="small"><li>Memori sementara</li><li>Data hilang saat mati</li><li>Bisa dibaca dan ditulis</li><li>Contoh: DDR4, DDR5</li></ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded">
+                                <h6><i class="fas fa-hdd text-success me-2"></i><strong>ROM (Read Only Memory)</strong></h6>
+                                <ul class="small"><li>Memori permanen</li><li>Data tetap saat mati</li><li>Hanya bisa dibaca</li><li>Contoh: BIOS, Firmware</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>3. Input/Output Devices</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <h6><i class="fas fa-sign-in-alt text-primary me-2"></i><strong>Input Devices</strong></h6>
+                                <ul class="mb-0"><li>Keyboard - memasukkan teks</li><li>Mouse - mengontrol kursor</li><li>Scanner - memindai gambar</li><li>Microphone - merekam suara</li><li>Webcam - merekam video</li></ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <h6><i class="fas fa-sign-out-alt text-success me-2"></i><strong>Output Devices</strong></h6>
+                                <ul class="mb-0"><li>Monitor - menampilkan visual</li><li>Printer - mencetak dokumen</li><li>Speaker - mengeluarkan suara</li><li>Projector - proyeksi layar</li><li>Headphone - suara pribadi</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>4. Bus System (Jalur Komunikasi)</h5>
+                    <p>Bus adalah jalur komunikasi yang menghubungkan komponen-komponen komputer:</p>
+                    <ul>
+                        <li><strong>Data Bus:</strong> Mengirim data antar komponen</li>
+                        <li><strong>Address Bus:</strong> Menentukan lokasi memori yang diakses</li>
+                        <li><strong>Control Bus:</strong> Mengirim sinyal kontrol (baca/tulis)</li>
+                    </ul>
+                    <div class="warning-box"><strong><i class="fas fa-exclamation-triangle me-2"></i>Perbedaan Penting:</strong><br><strong>Hardware</strong> = Komponen fisik (bisa disentuh: CPU, RAM, monitor)<br><strong>Software</strong> = Program/instruksi (tidak bisa disentuh: Windows, Word, Chrome)</div>
+                </div>
+
+                <div id="bk6" class="materi-detail">
+                    <h3>6. State Machine dan Sistem Operasi</h3>
+                    <h4>Apa itu State Machine?</h4>
+                    <p>State Machine (Mesin Keadaan) adalah model matematika yang menjelaskan perilaku sistem yang memiliki <strong>keadaan (state)</strong> tertentu dan dapat berpindah dari satu keadaan ke keadaan lain berdasarkan <strong>event</strong> (peristiwa) atau <strong>input</strong>.</p>
+                    <div class="highlight-box"><strong>Konsep Dasar State Machine:</strong><br><strong>State (Keadaan):</strong> Kondisi sistem pada suatu waktu<br><strong>Transition (Transisi):</strong> Perpindahan dari satu state ke state lain<br><strong>Event (Peristiwa):</strong> Pemicu yang menyebabkan transisi<br><strong>Action (Aksi):</strong> Kegiatan yang dilakukan saat transisi</div>
+                    <h4>Contoh State Machine: Lampu Lalu Lintas</h4>
+                    <div class="diagram-box">
+                        <h5><i class="fas fa-traffic-light me-2 text-primary"></i>State Machine Lampu Lalu Lintas</h5>
+                        <div class="row mt-3 justify-content-center">
+                            <div class="col-md-8">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="p-3 bg-danger text-white rounded-circle" style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;"><strong>MERAH</strong></div>
+                                    <i class="fas fa-arrow-right text-muted"></i>
+                                    <div class="p-3 bg-warning text-dark rounded-circle" style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;"><strong>KUNING</strong></div>
+                                    <i class="fas fa-arrow-right text-muted"></i>
+                                    <div class="p-3 bg-success text-white rounded-circle" style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;"><strong>HIJAU</strong></div>
+                                </div>
+                                <p class="mt-3 text-muted small">Event: Timer (waktu habis) - Transisi ke state berikutnya</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Contoh State Machine: Status Pesanan Online</h4>
+                    <div class="code-block">
+<span class="comment">// State Machine: Status Pesanan</span>
+<span class="comment">// States: DITERIMA - DIPROSES - DIKIRIM - DITERIMA_PELANGGAN</span>
+
+<span class="keyword">STATE</span> DITERIMA:
+    <span class="keyword">ON</span> event <span class="string">"bayar"</span> - <span class="keyword">TRANSITION TO</span> DIPROSES
+    <span class="keyword">ON</span> event <span class="string">"batal"</span> - <span class="keyword">TRANSITION TO</span> DIBATALKAN
+
+<span class="keyword">STATE</span> DIPROSES:
+    <span class="keyword">ON</span> event <span class="string">"siap_kirim"</span> - <span class="keyword">TRANSITION TO</span> DIKIRIM
+
+<span class="keyword">STATE</span> DIKIRIM:
+    <span class="keyword">ON</span> event <span class="string">"diterima"</span> - <span class="keyword">TRANSITION TO</span> SELESAI
+                    </div>
+                    <h4>Apa itu Sistem Operasi (OS)?</h4>
+                    <p>Sistem Operasi adalah <strong>perangkat lunak sistem</strong> yang mengelola sumber daya komputer (hardware) dan menyediakan layanan bagi program aplikasi. OS adalah penghubung antara pengguna dan hardware.</p>
+                    <h4>Fungsi Utama Sistem Operasi</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded mb-3">
+                                <h6><i class="fas fa-tasks text-primary me-2"></i><strong>Manajemen Proses</strong></h6>
+                                <p class="small mb-0">Mengatur jalannya program (proses), memberikan waktu CPU, dan menghentikan program yang bermasalah.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded mb-3">
+                                <h6><i class="fas fa-memory text-success me-2"></i><strong>Manajemen Memori</strong></h6>
+                                <p class="small mb-0">Mengalokasikan dan mengatur penggunaan RAM agar program berjalan optimal.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded mb-3">
+                                <h6><i class="fas fa-hdd text-warning me-2"></i><strong>Manajemen File</strong></h6>
+                                <p class="small mb-0">Mengatur penyimpanan, pengorganisasian, dan akses file di hard disk/SSD.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded mb-3">
+                                <h6><i class="fas fa-plug text-danger me-2"></i><strong>Manajemen Perangkat</strong></h6>
+                                <p class="small mb-0">Mengontrol perangkat keras (printer, scanner, USB) melalui driver.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Jenis-Jenis Sistem Operasi</h4>
+                    <div class="table-responsive">
+                        <table class="table table-materi table-bordered">
+                            <thead><tr><th>Kategori</th><th>Contoh</th><th>Karakteristik</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Desktop</strong></td><td>Windows, macOS, Linux</td><td>Untuk PC/laptop personal</td></tr>
+                                <tr><td><strong>Mobile</strong></td><td>Android, iOS</td><td>Untuk smartphone dan tablet</td></tr>
+                                <tr><td><strong>Server</strong></td><td>Windows Server, Ubuntu Server</td><td>Melayani banyak pengguna/jaringan</td></tr>
+                                <tr><td><strong>Embedded</strong></td><td>RTOS, Firmware</td><td>Untuk perangkat khusus (IoT, mesin)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="info-box"><strong><i class="fas fa-lightbulb me-2"></i>Perbedaan Windows, Linux, dan macOS:</strong><br><strong>Windows:</strong> Populer, kompatibel banyak software, berbayar (license)<br><strong>Linux:</strong> Open source (gratis), aman, banyak varian (Ubuntu, Fedora)<br><strong>macOS:</strong> Eksklusif Apple, desain elegan, harga tinggi</div>
+                </div>
+
+                <div id="ld" class="materi-detail">
+                    <h2 class="fw-bold text-primary mb-4"><i class="fas fa-digital-tachograph me-2"></i>Literasi Digital</h2>
+                    <p class="lead">Literasi Digital adalah kemampuan menggunakan teknologi informasi dan komunikasi untuk menemukan, mengevaluasi, membuat, dan mengomunikasikan informasi secara efektif, etis, dan aman di dunia digital.</p>
+                </div>
+
+                <div id="ld1" class="materi-detail">
+                    <h3>1. Penggunaan Mesin Pencari</h3>
+                    <h4>Apa itu Mesin Pencari?</h4>
+                    <p>Mesin pencari (Search Engine) adalah program komputer yang mencari dan mengindeks informasi di internet berdasarkan kata kunci yang dimasukkan pengguna. Contoh mesin pencari populer: <strong>Google, Bing, Yahoo, DuckDuckGo</strong>.</p>
+                    <div class="highlight-box"><strong>Cara Kerja Mesin Pencari (Sederhana):</strong><br><span class="step-number">1</span> <strong>Crawling:</strong> Robot (spider) menjelajahi internet dan mengumpulkan halaman web<br><span class="step-number">2</span> <strong>Indexing:</strong> Data disimpan dan diurutkan dalam database besar<br><span class="step-number">3</span> <strong>Ranking:</strong> Algoritme menentukan urutan hasil paling relevan<br><span class="step-number">4</span> <strong>Display:</strong> Menampilkan hasil pencarian ke pengguna</div>
+                    <h4>Teknik Pencarian Efektif</h4>
+                    <h5>Operator Pencarian Google</h5>
+                    <div class="table-responsive">
+                        <table class="table table-materi table-bordered">
+                            <thead><tr><th>Operator</th><th>Fungsi</th><th>Contoh</th></tr></thead>
+                            <tbody>
+                                <tr><td><code>"..."</code></td><td>Pencarian frasa persis</td><td><code>"Kurikulum Merdeka"</code></td></tr>
+                                <tr><td><code>site:</code></td><td>Cari di situs tertentu</td><td><code>site:kemdikbud.go.id informatika</code></td></tr>
+                                <tr><td><code>filetype:</code></td><td>Cari file tertentu</td><td><code>filetype:pdf algoritma dasar</code></td></tr>
+                                <tr><td><code>-</code></td><td>Kecualikan kata</td><td><code>jagung -manis</code> (cari jagung, bukan jagung manis)</td></tr>
+                                <tr><td><code>OR</code></td><td>Salah satu kata</td><td><code>SMK OR SMA informatika</code></td></tr>
+                                <tr><td><code>*</code></td><td>Pengganti kata</td><td><code>"teknologi * digital"</code></td></tr>
+                                <tr><td><code>..</code></td><td>Rentang angka</td><td><code>laptop Rp5000000..Rp10000000</code></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h4>Tips Mencari Informasi yang Akurat</h4>
+                    <ol>
+                        <li><strong>Gunakan kata kunci spesifik</strong> - Hindari kata umum, gunakan istilah teknis</li>
+                        <li><strong>Periksa domain website</strong> - .ac.id, .go.id, .edu lebih kredibel</li>
+                        <li><strong>Lihat tanggal publikasi</strong> - Pastikan informasi masih relevan</li>
+                        <li><strong>Bandingkan beberapa sumber</strong> - Jangan percaya satu sumber saja</li>
+                        <li><strong>Gunakan Google Scholar</strong> - Untuk mencari jurnal dan penelitian ilmiah</li>
+                    </ol>
+                    <div class="quiz-box">
+                        <h5><i class="fas fa-search me-2 text-primary"></i>Latihan!</h5>
+                        <p>Tulis query Google untuk mencari file PDF tentang "pseudocode" dari situs .ac.id!</p>
+                        <button class="btn-reveal" onclick="this.nextElementSibling.style.display='block';this.style.display='none';">Lihat Jawaban</button>
+                        <div class="quiz-answer"><code>filetype:pdf pseudocode site:.ac.id</code><br><br>Penjelasan: <code>filetype:pdf</code> = cari file PDF, <code>site:.ac.id</code> = hanya dari situs akademik Indonesia</div>
+                    </div>
+                </div>
+
+                <div id="ld2" class="materi-detail">
+                    <h3>2. Evaluasi Informasi Digital</h3>
+                    <h4>Mengapa Perlu Mengevaluasi Informasi?</h4>
+                    <p>Internet dipenuhi informasi - ada yang <strong>benar, salah, menyesatkan, atau hoaks</strong>. Kemampuan mengevaluasi informasi sangat penting agar tidak terjebak misinformasi.</p>
+                    <div class="warning-box"><strong><i class="fas fa-exclamation-triangle me-2"></i>Bahaya Misinformasi:</strong><br>Hoaks kesehatan - Risiko kesehatan | Berita palsu - Konflik sosial | Penipuan online - Kerugian finansial</div>
+                    <h4>5W+1H untuk Mengevaluasi Informasi</h4>
+                    <div class="row">
+                        <div class="col-md-4"><div class="p-3 border rounded mb-3 text-center"><i class="fas fa-user text-primary fa-2x mb-2"></i><h6><strong>WHO</strong></h6><p class="small mb-0">Siapa penulisnya? Apakah ahli di bidangnya?</p></div></div>
+                        <div class="col-md-4"><div class="p-3 border rounded mb-3 text-center"><i class="fas fa-question text-success fa-2x mb-2"></i><h6><strong>WHAT</strong></h6><p class="small mb-0">Apa isi informasinya? Fakta atau opini?</p></div></div>
+                        <div class="col-md-4"><div class="p-3 border rounded mb-3 text-center"><i class="fas fa-clock text-warning fa-2x mb-2"></i><h6><strong>WHEN</strong></h6><p class="small mb-0">Kapan dipublikasikan? Masih relevan?</p></div></div>
+                        <div class="col-md-4"><div class="p-3 border rounded mb-3 text-center"><i class="fas fa-map-marker-alt text-danger fa-2x mb-2"></i><h6><strong>WHERE</strong></h6><p class="small mb-0">Di mana dipublikasikan? Situs kredibel?</p></div></div>
+                        <div class="col-md-4"><div class="p-3 border rounded mb-3 text-center"><i class="fas fa-bullseye text-info fa-2x mb-2"></i><h6><strong>WHY</strong></h6><p class="small mb-0">Mengapa ditulis? Ada kepentingan apa?</p></div></div>
+                        <div class="col-md-4"><div class="p-3 border rounded mb-3 text-center"><i class="fas fa-cogs text-secondary fa-2x mb-2"></i><h6><strong>HOW</strong></h6><p class="small mb-0">Bagaimana datanya didapat? Ada bukti?</p></div></div>
+                    </div>
+                    <h4>Ciri-Ciri Informasi Kredibel vs Hoaks</h4>
+                    <div class="table-responsive">
+                        <table class="table table-materi table-bordered">
+                            <thead><tr><th>Informasi Kredibel</th><th>Hoaks/Misleading</th></tr></thead>
+                            <tbody>
+                                <tr><td>Penulis jelas dan bisa diverifikasi</td><td>Penulis anonim atau palsu</td></tr>
+                                <tr><td>Ada referensi/sumber data</td><td>Tidak ada sumber atau sumber palsu</td></tr>
+                                <tr><td>Bahasa netral dan objektif</td><td>Bahasa provokatif, emosional</td></tr>
+                                <tr><td>Tanggal publikasi jelas</td><td>Tanggal tidak jelas atau palsu</td></tr>
+                                <tr><td>Domain resmi (.go.id, .edu, .ac.id)</td><td>Domain mencurigakan (.xyz, .tk)</td></tr>
+                                <tr><td>Foto/video asli, tidak diedit</td><td>Foto/video editan atau lama</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h4>Tools untuk Memeriksa Fakta</h4>
+                    <ul>
+                        <li><strong>TurnBackHoax.id</strong> - Database hoaks Indonesia</li>
+                        <li><strong>Google Reverse Image</strong> - Cek keaslian foto</li>
+                        <li><strong>Snopes.com</strong> - Fact-checking internasional</li>
+                        <li><strong>MAFINDO</strong> - Masyarakat Anti Fitnah Indonesia</li>
+                        <li><strong>CekFakta.com</strong> - Portal cek fakta Indonesia</li>
+                    </ul>
+                </div>
+
+                <div id="ld3" class="materi-detail">
+                    <h3>3. Penggunaan Aplikasi Produktivitas</h3>
+                    <h4>Microsoft Word (Pengolah Kata)</h4>
+                    <p>Microsoft Word adalah aplikasi untuk membuat, mengedit, dan memformat dokumen teks. Digunakan untuk membuat laporan, surat, makalah, dan dokumen resmi.</p>
+                    <h5>Fitur Utama Word:</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li><strong>Formatting:</strong> Font, ukuran, warna, alignment</li>
+                                <li><strong>Styles:</strong> Heading 1, 2, 3 untuk struktur dokumen</li>
+                                <li><strong>Table:</strong> Membuat tabel data</li>
+                                <li><strong>Insert:</strong> Gambar, chart, shapes, header/footer</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li><strong>Page Layout:</strong> Margin, orientasi, ukuran kertas</li>
+                                <li><strong>Mail Merge:</strong> Surat massal dengan data berbeda</li>
+                                <li><strong>Track Changes:</strong> Melacak perubahan dokumen</li>
+                                <li><strong>References:</strong> Daftar pustaka otomatis</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info-box"><strong><i class="fas fa-lightbulb me-2"></i>Shortcut Penting Word:</strong><br><code>Ctrl+B</code> = Bold | <code>Ctrl+I</code> = Italic | <code>Ctrl+U</code> = Underline<br><code>Ctrl+S</code> = Save | <code>Ctrl+P</code> = Print | <code>Ctrl+Z</code> = Undo</div>
+                    <h4>Microsoft Excel (Spreadsheet)</h4>
+                    <p>Microsoft Excel adalah aplikasi untuk mengolah data dalam bentuk tabel (spreadsheet). Sangat berguna untuk perhitungan, analisis data, dan pembuatan grafik.</p>
+                    <h5>Konsep Dasar Excel:</h5>
+                    <div class="table-responsive">
+                        <table class="table table-materi table-bordered">
+                            <thead><tr><th>Istilah</th><th>Penjelasan</th><th>Contoh</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Cell</strong></td><td>Kotak kecil untuk memasukkan data</td><td>A1, B2, C3</td></tr>
+                                <tr><td><strong>Row</strong></td><td>Baris horizontal (nomor)</td><td>1, 2, 3, ...</td></tr>
+                                <tr><td><strong>Column</strong></td><td>Kolom vertikal (huruf)</td><td>A, B, C, ...</td></tr>
+                                <tr><td><strong>Range</strong></td><td>Kumpulan cell</td><td>A1:C5</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h5>Rumus Dasar Excel:</h5>
+                    <div class="table-responsive">
+                        <table class="table table-materi table-bordered">
+                            <thead><tr><th>Rumus</th><th>Fungsi</th><th>Contoh</th></tr></thead>
+                            <tbody>
+                                <tr><td><code>=SUM(A1:A10)</code></td><td>Menjumlahkan range</td><td>Total nilai siswa</td></tr>
+                                <tr><td><code>=AVERAGE(A1:A10)</code></td><td>Rata-rata</td><td>Rata-rata nilai</td></tr>
+                                <tr><td><code>=MAX(A1:A10)</code></td><td>Nilai tertinggi</td><td>Nilai tertinggi kelas</td></tr>
+                                <tr><td><code>=MIN(A1:A10)</code></td><td>Nilai terendah</td><td>Nilai terendah kelas</td></tr>
+                                <tr><td><code>=COUNT(A1:A10)</code></td><td>Menghitung jumlah data</td><td>Jumlah siswa</td></tr>
+                                <tr><td><code>=IF(A1>=75,"Lulus","Tidak")</code></td><td>Percabangan</td><td>Status kelulusan</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h4>Microsoft PowerPoint (Presentasi)</h4>
+                    <p>Microsoft PowerPoint adalah aplikasi untuk membuat presentasi visual. Digunakan untuk presentasi kelas, seminar, dan rapat.</p>
+                    <h5>Tips Membuat Presentasi yang Baik:</h5>
+                    <ol>
+                        <li><strong>6x6 Rule:</strong> Maksimal 6 baris per slide, 6 kata per baris</li>
+                        <li><strong>Konsisten:</strong> Gunakan template dan warna yang seragam</li>
+                        <li><strong>Visual:</strong> Gunakan gambar dan grafik, hindari teks panjang</li>
+                        <li><strong>Font:</strong> Minimal 24pt agar terbaca dari jauh</li>
+                        <li><strong>Animasi:</strong> Gunakan secukupnya, jangan berlebihan</li>
+                        <li><strong>Konten:</strong> Fokus pada poin penting, bukan semua detail</li>
+                    </ol>
+                    <div class="highlight-box"><strong>Alternatif Gratis:</strong><br>Jika tidak punya Microsoft Office, gunakan <strong>Google Docs</strong> (pengolah kata), <strong>Google Sheets</strong> (spreadsheet), dan <strong>Google Slides</strong> (presentasi) - semuanya gratis dan bisa diakses dari browser!</div>
+                </div>
+
+                <div id="ld4" class="materi-detail">
+                    <h3>4. Konsep Jaringan Komputer</h3>
+                    <h4>Apa itu Jaringan Komputer?</h4>
+                    <p>Jaringan komputer adalah kumpulan dua atau lebih komputer yang saling terhubung untuk berbagi sumber daya (data, printer, internet) dan berkomunikasi.</p>
+                    <h4>Jenis-Jenis Jaringan Berdasarkan Jangkauan</h4>
+                    <div class="table-responsive">
+                        <table class="table table-materi table-bordered">
+                            <thead><tr><th>Jenis</th><th>Singkatan</th><th>Jangkauan</th><th>Contoh</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>PAN</strong></td><td>Personal Area Network</td><td>Beberapa meter</td><td>Bluetooth, USB</td></tr>
+                                <tr><td><strong>LAN</strong></td><td>Local Area Network</td><td>Gedung/kampus</td><td>WiFi sekolah, kantor</td></tr>
+                                <tr><td><strong>MAN</strong></td><td>Metropolitan Area Network</td><td>Kota</td><td>Jaringan antar kampus di satu kota</td></tr>
+                                <tr><td><strong>WAN</strong></td><td>Wide Area Network</td><td>Negara/dunia</td><td>Internet</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h4>Topologi Jaringan</h4>
+                    <p>Topologi adalah cara komputer disusun dan dihubungkan dalam jaringan.</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded mb-3">
+                                <h6><i class="fas fa-star text-primary me-2"></i><strong>Star (Bintang)</strong></h6>
+                                <p class="small mb-0">Semua komputer terhubung ke satu perangkat pusat (switch/hub). Jika satu kabel putus, hanya komputer tersebut yang terpengaruh.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded mb-3">
+                                <h6><i class="fas fa-circle text-success me-2"></i><strong>Ring (Cincin)</strong></h6>
+                                <p class="small mb-0">Komputer terhubung membentuk lingkaran. Data mengalir searah. Jika satu kabel putus, seluruh jaringan terpengaruh.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded mb-3">
+                                <h6><i class="fas fa-project-diagram text-warning me-2"></i><strong>Bus (Garis)</strong></h6>
+                                <p class="small mb-0">Semua komputer terhubung ke satu kabel utama (backbone). Jika kabel utama putus, seluruh jaringan mati.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded mb-3">
+                                <h6><i class="fas fa-network-wired text-danger me-2"></i><strong>Mesh (Jaring)</strong></h6>
+                                <p class="small mb-0">Setiap komputer terhubung ke semua komputer lain. Sangat andal tapi mahal dan kompleks.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Perangkat Jaringan</h4>
+                    <div class="table-responsive">
+                        <table class="table table-materi table-bordered">
+                            <thead><tr><th>Perangkat</th><th>Fungsi</th><th>Contoh</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Router</strong></td><td>Menghubungkan jaringan yang berbeda, mengarahkan data</td><td>WiFi router rumah</td></tr>
+                                <tr><td><strong>Switch</strong></td><td>Menghubungkan banyak komputer dalam satu jaringan</td><td>Switch 8 port</td></tr>
+                                <tr><td><strong>Hub</strong></td><td>Menghubungkan komputer (mirip switch tapi lebih sederhana)</td><td>Hub 4 port</td></tr>
+                                <tr><td><strong>Modem</strong></td><td>Mengubah sinyal digital ke analog (dan sebaliknya)</td><td>Modem IndiHome</td></tr>
+                                <tr><td><strong>Access Point</strong></td><td>Menyebarkan sinyal WiFi</td><td>TP-Link, Ubiquiti</td></tr>
+                                <tr><td><strong>NIC</strong></td><td>Network Interface Card - kartu jaringan di komputer</td><td>Kartu WiFi, LAN card</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h4>Media Transmisi Jaringan</h4>
+                    <ul>
+                        <li><strong>Kabel UTP (Unshielded Twisted Pair):</strong> Kabel tembaga yang paling umum digunakan. Ada kategori Cat5, Cat5e, Cat6, Cat6a.</li>
+                        <li><strong>Kabel Fiber Optic:</strong> Menggunakan cahaya untuk mengirim data. Kecepatan tinggi, tahan interferensi, jarak jauh.</li>
+                        <li><strong>Wireless (Nirkabel):</strong> Menggunakan gelombang radio (WiFi, Bluetooth, 4G/5G).</li>
+                    </ul>
+                    <div class="info-box"><strong><i class="fas fa-lightbulb me-2"></i>Tips:</strong><br>Kecepatan internet diukur dalam <strong>Mbps</strong> (Megabit per second).<br>1 MB (Megabyte) = 8 Mb (Megabit). Jadi jika kecepatan 10 Mbps, download file 10 MB membutuhkan waktu sekitar 8 detik.</div>
+                </div>
+
+                <div id="ld5" class="materi-detail">
+                    <h3>5. Keamanan Digital</h3>
+                    <h4>Mengapa Keamanan Digital Penting?</h4>
+                    <p>Di era digital, data pribadi kita (foto, password, informasi bank) tersimpan di internet. Tanpa keamanan yang baik, data ini bisa dicuri, disalahgunakan, atau dihapus.</p>
+                    <div class="warning-box"><strong><i class="fas fa-exclamation-triangle me-2"></i>Ancaman Digital:</strong><br>Phishing - Penipuan lewat email/pesan palsu | Malware - Virus, trojan, ransomware | Hacking - Peretasan akun | Identity Theft - Pencurian identitas</div>
+                    <h4>Password yang Kuat</h4>
+                    <p>Password adalah garis pertahanan pertama akun digital Anda. Password yang kuat harus:</p>
+                    <ul>
+                        <li><strong>Panjang:</strong> Minimal 12 karakter</li>
+                        <li><strong>Kompleks:</strong> Kombinasi huruf besar, huruf kecil, angka, dan simbol</li>
+                        <li><strong>Unik:</strong> Berbeda untuk setiap akun</li>
+                        <li><strong>Tidak mudah ditebak:</strong> Hindari tanggal lahir, nama, "password123"</li>
+                    </ul>
+                    <div class="highlight-box"><strong>Contoh Password Kuat:</strong><br><span style="color:green;"><strong>B3l@j@rInformat1ka!2026</strong></span> (menggabungkan kata, angka, simbol)<br><br><strong>Contoh Password Lemah (JANGAN DIPAKAI!):</strong><br><span style="color:red;">password123, 123456, nama123, tanggallahir</span></div>
+                    <h4>Autentikasi Dua Faktor (2FA)</h4>
+                    <p>2FA adalah lapisan keamanan tambahan selain password. Setelah memasukkan password, Anda harus memverifikasi identitas dengan cara kedua:</p>
+                    <ul>
+                        <li><strong>SMS/OTP:</strong> Kode dikirim ke nomor HP</li>
+                        <li><strong>Authenticator App:</strong> Google Authenticator, Microsoft Authenticator</li>
+                        <li><strong>Biometrik:</strong> Sidik jari, wajah, iris mata</li>
+                        <li><strong>Security Key:</strong> Perangkat fisik seperti USB token</li>
+                    </ul>
+                    <div class="info-box"><strong><i class="fas fa-lightbulb me-2"></i>Tips Keamanan Digital:</strong><br>1. Aktifkan 2FA di semua akun penting (email, bank, media sosial)<br>2. Gunakan Password Manager (Bitwarden, LastPass) untuk menyimpan password<br>3. Jangan klik link mencurigakan di email/pesan<br>4. Update software dan antivirus secara rutin<br>5. Jangan gunakan WiFi publik untuk transaksi sensitif</div>
+                    <h4>Mengenali Phishing</h4>
+                    <p>Phishing adalah upaya penipuan untuk mendapatkan informasi sensitif (password, data bank) dengan menyamar sebagai entitas tepercaya.</p>
+                    <h5>Ciri-Ciri Email Phishing:</h5>
+                    <ul>
+                        <li>Alamat email pengirim mencurigakan (misal: support@amaz0n.com bukan amazon.com)</li>
+                        <li>Teks berisi kesalahan ejaan/grammar</li>
+                        <li>Minta informasi sensitif (bank, password)</li>
+                        <li>Tautan yang mengarah ke situs palsu</li>
+                        <li>Menciptakan rasa urgensi/kepanikan ("Akun Anda akan diblokir!")</li>
+                        <li>Lampiran file mencurigakan (.exe, .zip dari pengirim tidak dikenal)</li>
+                    </ul>
+                </div>
+
+                <div id="ld6" class="materi-detail">
+                    <h3>6. Hak Kekayaan Intelektual dan Etika Digital</h3>
+                    <h4>Hak Kekayaan Intelektual (HKI)</h4>
+                    <p>Hak Kekayaan Intelektual adalah hak eksklusif yang diberikan kepada seseorang atas hasil karya intelektualnya. HKI melindungi kreativitas dan inovasi.</p>
+                    <h4>Jenis-Jenis HKI</h4>
+                    <div class="table-responsive">
+                        <table class="table table-materi table-bordered">
+                            <thead><tr><th>Jenis</th><th>Perlindungan</th><th>Contoh</th><th>Durasi</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Hak Cipta (Copyright)</strong></td><td>Karya tulis, musik, film, software</td><td>Lagu, buku, aplikasi</td><td>Seumur hidup + 70 tahun</td></tr>
+                                <tr><td><strong>Merek (Trademark)</strong></td><td>Nama/logo produk/jasa</td><td>Nike, Apple, Google</td><td>10 tahun (bisa diperpanjang)</td></tr>
+                                <tr><td><strong>Paten</strong></td><td>Temuan/inovasi teknis</td><td>Mesin, obat, teknologi</td><td>20 tahun</td></tr>
+                                <tr><td><strong>Rahasia Dagang</strong></td><td>Informasi rahasia bisnis</td><td>Resep Coca-Cola, algoritma Google</td><td>Selama tetap rahasia</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h4>Lisensi Software</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded mb-3">
+                                <h6><i class="fas fa-lock text-danger me-2"></i><strong>Proprietary (Berbayar)</strong></h6>
+                                <p class="small mb-0">Software yang harus dibeli/license. Contoh: Microsoft Office, Adobe Photoshop, Windows. Dilarang menyalin/distribusikan tanpa izin.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded mb-3">
+                                <h6><i class="fas fa-unlock text-success me-2"></i><strong>Open Source (Gratis)</strong></h6>
+                                <p class="small mb-0">Kode sumber terbuka, bisa digunakan, dimodifikasi, dan didistribusikan. Contoh: Linux, LibreOffice, Firefox.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="warning-box"><strong><i class="fas fa-exclamation-triangle me-2"></i>Pelanggaran HKI yang Sering Terjadi:</strong><br>1. Mengunduh film/musik/software bajakan<br>2. Menyalin tugas/orang lain tanpa menyebut sumber (plagiarisme)<br>3. Menggunakan gambar dari internet tanpa izin<br>4. Memalsukan merek produk</div>
+                    <h4>Etika Digital</h4>
+                    <p>Etika digital adalah norma perilaku yang harus diterapkan saat menggunakan teknologi digital dan internet.</p>
+                    <h5>Prinsip Etika Digital:</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded mb-3">
+                                <h6><i class="fas fa-user-shield text-primary me-2"></i><strong>Privasi</strong></h6>
+                                <p class="small mb-0">Menghargai privasi orang lain. Jangan membagikan informasi pribadi orang lain tanpa izin.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded mb-3">
+                                <h6><i class="fas fa-comments text-success me-2"></i><strong>Berkomunikasi dengan Baik</strong></h6>
+                                <p class="small mb-0">Gunakan bahasa yang sopan. Hindari cyberbullying, ujaran kebencian, dan provokasi.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded mb-3">
+                                <h6><i class="fas fa-balance-scale text-warning me-2"></i><strong>Kejujuran</strong></h6>
+                                <p class="small mb-0">Jangan menyebarkan hoaks, berita palsu, atau informasi menyesatkan.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded mb-3">
+                                <h6><i class="fas fa-hand-holding-heart text-danger me-2"></i><strong>Tanggung Jawab</strong></h6>
+                                <p class="small mb-0">Pikirkan dampak dari setiap unggahan. Apa yang diinternet, tetap diinternet.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Penyaringan Konten dan Pengelolaan Akun</h4>
+                    <h5>Tips Mengelola Akun Digital dengan Bijak:</h5>
+                    <ol>
+                        <li><strong>Gunakan email yang berbeda</strong> untuk akun penting (bank) dan akun umum (media sosial)</li>
+                        <li><strong>Review privasi</strong> di setiap platform sosial media secara berkala</li>
+                        <li><strong>Jangan oversharing</strong> - batasi informasi pribadi yang dibagikan</li>
+                        <li><strong>Gunakan fitur penyaringan</strong> (filter) untuk konten yang tidak pantas</li>
+                        <li><strong>Laporkan</strong> konten negatif, penipuan, atau cyberbullying</li>
+                        <li><strong>Hapus akun lama</strong> yang tidak lagi digunakan</li>
+                        <li><strong>Aktifkan parental control</strong> jika diperlukan</li>
+                    </ol>
+                    <div class="highlight-box"><strong>Digital Footprint (Jejak Digital):</strong><br>Setiap aktivitas online meninggalkan jejak. Foto, komentar, unggahan yang dihapus masih bisa tersimpan di server atau di-screenshot orang lain. <strong>Berpikirlah sebelum memposting!</strong></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0"><i class="fas fa-laptop-code me-2"></i><strong>Belajar Informatika SMK</strong> - Fase E</p>
+                    <small class="text-muted">Media pembelajaran interaktif berbasis Kurikulum Merdeka</small>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <small class="text-muted"><i class="fas fa-heart text-danger me-1"></i> Dibuat untuk siswa SMK Kelas X</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="btn btn-primary rounded-circle shadow" title="Kembali ke Atas" style="position:fixed;bottom:30px;right:30px;width:50px;height:50px;display:none;align-items:center;justify-content:center;z-index:1000;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border:none;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

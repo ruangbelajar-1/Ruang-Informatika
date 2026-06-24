@@ -1,0 +1,563 @@
+/* ============================================ */
+/* STYLE.CSS - Gaya Tampilan Website            */
+/* Dibuat untuk: Belajar Informatika SMK Fase E */
+/* ============================================ */
+
+/* --- Variabel Warna (CSS Custom Properties) --- */
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #858796;
+    --success-color: #1cc88a;
+    --info-color: #36b9cc;
+    --warning-color: #f6c23e;
+    --danger-color: #e74a3b;
+    --dark-color: #5a5c69;
+    --light-color: #f8f9fc;
+    --font-family: 'Poppins', sans-serif;
+}
+
+/* --- Reset & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 76px; /* Ruang untuk navbar fixed */
+}
+
+html {
+    scroll-behavior: smooth; /* Scroll halus saat klik navigasi */
+}
+
+/* ============================================ */
+/* NAVBAR - Gaya Navigasi                       */
+/* ============================================ */
+#mainNav {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+#mainNav.navbar-scrolled {
+    padding: 0.5rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    color: #fff !important;
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.9) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    margin: 0 3px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #fff !important;
+    background-color: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+/* ============================================ */
+/* HERO SECTION - Halaman Utama                 */
+/* ============================================ */
+.hero-section {
+    min-height: 100vh;
+    background-image: url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+    padding: 120px 0 100px;
+}
+
+.hero-icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+.hero-icon i {
+    font-size: 5rem;
+    color: rgba(255,255,255,0.9);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero-section .lead {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* Tombol Hero */
+.hero-section .btn-primary {
+    background-color: #fff;
+    color: #667eea;
+    border: 2px solid #fff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: transparent;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.hero-section .btn-outline-light {
+    border: 2px solid rgba(255,255,255,0.8);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-outline-light:hover {
+    background-color: rgba(255,255,255,0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Wave SVG di bawah hero */
+.wave-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+}
+
+.wave-bottom svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+}
+
+/* ============================================ */
+/* SECTION STYLES - Judul & Divider             */
+/* ============================================ */
+.section-title {
+    color: #2d3748;
+    position: relative;
+    display: inline-block;
+}
+
+.divider {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+    margin-top: 15px;
+}
+
+/* ============================================ */
+/* MATERI SECTION - Card Styles                 */
+/* ============================================ */
+.materi-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.materi-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+}
+
+/* Gradient backgrounds untuk card image */
+.bg-gradient-primary { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.bg-gradient-info { background: linear-gradient(135deg, #36b9cc 0%, #4e73df 100%); }
+.bg-gradient-success { background: linear-gradient(135deg, #1cc88a 0%, #36b9cc 100%); }
+.bg-gradient-warning { background: linear-gradient(135deg, #f6c23e 0%, #e74a3b 100%); }
+.bg-gradient-danger { background: linear-gradient(135deg, #e74a3b 0%, #f6c23e 100%); }
+.bg-gradient-secondary { background: linear-gradient(135deg, #858796 0%, #5a5c69 100%); }
+
+.materi-card .card-body {
+    padding: 1.5rem;
+}
+
+.materi-card .card-title {
+    color: #2d3748;
+    margin-bottom: 0.75rem;
+}
+
+.materi-card .badge {
+    font-size: 0.75rem;
+    padding: 0.4em 0.8em;
+    border-radius: 20px;
+}
+
+/* Tab Pills */
+.nav-pills .nav-link {
+    color: #667eea !important;
+    background-color: transparent;
+    border: 2px solid #667eea;
+    border-radius: 30px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    margin: 0 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #667eea;
+    color: white !important;
+}
+
+.nav-pills .nav-link.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: transparent;
+    color: white !important;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* ============================================ */
+/* VIDEO SECTION - Card Video                   */
+/* ============================================ */
+.video-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12) !important;
+}
+
+.video-card .ratio {
+    background-color: #000;
+}
+
+.video-card iframe {
+    border: none;
+}
+
+.video-card .card-body {
+    padding: 1.25rem;
+}
+
+/* ============================================ */
+/* FOOTER - Bagian Bawah                        */
+/* ============================================ */
+.footer {
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    color: rgba(255,255,255,0.8);
+}
+
+.footer strong {
+    color: white;
+}
+
+/* ============================================ */
+/* BACK TO TOP BUTTON                           */
+/* ============================================ */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+#backToTop:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+#backToTop.show {
+    display: flex;
+}
+
+/* ============================================ */
+/* RESPONSIVE DESIGN - Mobile Friendly          */
+/* ============================================ */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .hero-section {
+        padding: 80px 0 60px;
+        min-height: auto;
+    }
+
+    .hero-icon i {
+        font-size: 3.5rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+
+    .nav-pills .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .materi-card,
+    .video-card,
+    .artikel-card {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 1.6rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+}
+
+/* ============================================ */
+/* ANIMATIONS - Efek Tambahan                   */
+/* ============================================ */
+.fade-in {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Selection color */
+::selection {
+    background-color: #667eea;
+    color: white;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+/* Styling khusus untuk section buku agar sesuai tema */
+#buku {
+  background-image: url('images/buku-bg.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#buku .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#buku .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2) !important;
+}
+
+#buku .btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+/* ============================================ */
+/* GAME PAGE - Halaman Game Edukasi             */
+/* ============================================ */
+.game-hero {
+    background-image: url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 140px 0 70px;
+}
+
+.game-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12) !important;
+}
+
+.game-card-icon {
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2.8rem;
+}
+
+/* --- Quiz --- */
+.quiz-box {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    padding: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.quiz-progress {
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.quiz-option {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 10px;
+    background: #fff;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.quiz-option:hover {
+    border-color: #667eea;
+    background: #f3f4fd;
+}
+
+.quiz-option.correct {
+    border-color: #1cc88a;
+    background: #e7f9f1;
+}
+
+.quiz-option.wrong {
+    border-color: #e74a3b;
+    background: #fdeceb;
+}
+
+/* --- Drag & Drop --- */
+.dnd-item {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 10px;
+    margin: 6px;
+    cursor: grab;
+    font-weight: 600;
+    display: inline-block;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.dnd-item.dragging { opacity: 0.4; }
+
+.dnd-pool {
+    background: #f8f9fc;
+    border: 2px dashed #c3c6e0;
+    border-radius: 15px;
+    padding: 15px;
+    min-height: 90px;
+}
+
+.dnd-category {
+    background: #fff;
+    border: 2px dashed #667eea;
+    border-radius: 15px;
+    padding: 15px;
+    min-height: 130px;
+}
+
+.dnd-category.dragover {
+    background: #f0f1fc;
+    border-color: #764ba2;
+}
+
+.dnd-category h6 {
+    color: #667eea;
+    font-weight: 700;
+}
+
+/* --- Cyber Defender --- */
+.cyber-case {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    padding: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cyber-message {
+    background: #f8f9fc;
+    border-left: 4px solid #667eea;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Result --- */
+.game-result {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    padding: 2.5rem;
+}
+
+.game-result .score-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 auto 1.5rem;
+}
